@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn-scroll-to-top {
+	background: theme-color(pallet-color-2);
+    color: #fff;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 10px 4px 10px 4px;
+    transform: rotate(7deg);
+    width: 45px;
+    height: 45px;
+    transition: all 0.4s ease;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > * {
+    	transform: rotate(-7deg);
+    	color: #fff;
+    	fill: #fff;
+    	transition: all 0.4s ease;
+    }
+
+    &:hover {
+    	transform: rotate(0deg);
+
+    	 > * {
+    	 	transform: rotate(0deg);
+    	 }
+    }
+}

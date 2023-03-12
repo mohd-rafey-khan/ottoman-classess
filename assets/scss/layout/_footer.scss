@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.site-footer {
+    padding: 0 0 35px;
+
+	&__copyright {
+	    font-weight: 600;
+	    font-size: 0.7rem;
+	    margin: 0;
+	    text-align: center;
+	}
+}

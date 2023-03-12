@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>Edukidz HTML5 | Accordian</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="bs-docs-home ">
+        <header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Edukidz HTML</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="getting-started.html">
+                    Getting Started
+                </a>
+                        </li>
+                        <li>
+                            <a href="using-edukidz.html">
+                    Using Edukidz
+                </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="accordian.html">
+                                    Accordian
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="slider.html">
+                                    Slider
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="tabs.html">
+                                    Tabs
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="icons.html">
+                                    Icons
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="misc-elements.html">
+                                    Misc Elements
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="contact-form.html">
+                                    Contact Form
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="compile-scss.html">
+                    Compile SCSS
+                </a>
+                        </li>
+                    </ul>
+                    
+                </nav>
+            </div>
+        </header>
+        <div class="bs-header" id="content">
+            <div class="container">
+                <h1>Accordian</h1>
+                <p>How to create an accordian.</p>
+            </div>
+        </div>
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#accordian">Accordian</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <h1 id="accordian">Accordian</h1>
+                        <p>When you need to hide and expose a lot of stuff, accordions come in handy.</p>
+                        <pre><code>&lt;div class=&quot;accordion accordion--skin-1&quot; id=&quot;accordion&quot;&gt;
+            &lt;div class=&quot;card&quot;&gt;
+                &lt;a class=&quot;card-header collapsed&quot; id=&quot;heading_Accordian_item_1&quot; role=&quot;button&quot; href=&quot;#Accordian_item_1&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#Accordian_item_1&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;Accordian_item_1&quot;&gt;
+                    Accordian Heading 1
+                &lt;/a&gt;
+                &lt;div id=&quot;Accordian_item_1&quot; class=&quot;collapse&quot; aria-labelledby=&quot;heading_Accordian_item_1&quot; data-parent=&quot;#accordion&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                        &lt;p&gt;
+                            Accordian content
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card&quot;&gt;
+                &lt;a class=&quot;card-header collapsed&quot; id=&quot;heading_Accordian_item_2&quot; class=&quot;&quot; role=&quot;button&quot; href=&quot;#Accordian_item_2&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#Accordian_item_2&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;Accordian_item_2&quot;&gt;
+                    Accordian Heading 2
+                &lt;/a&gt;
+                &lt;div id=&quot;Accordian_item_2&quot; class=&quot;collapse&quot; aria-labelledby=&quot;heading_Accordian_item_2&quot; data-parent=&quot;#accordion&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                        &lt;p&gt;
+                            Accordian content
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+           &lt;/div&gt;</code></pre>
+                        <p><img src="assets/images/accordian.png" alt=""></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <footer class="docs-footer" role="contentinfo">
+            <div class="container">
+                <ul class="bs-masthead-links pull-left">
+                    <li class="current-version">
+                       Copyright © Webmavens
+                    </li>
+                </ul>
+        </footer>
+    </body>
+    <script src="assets/js/main.js"></script>
+</html>

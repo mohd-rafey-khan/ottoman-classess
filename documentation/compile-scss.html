@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>Edukidz HTML5 | Compile SCSS</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="bs-docs-home ">
+        <header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Edukidz HTML</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="getting-started.html">
+                    Getting Started
+                </a>
+                        </li>
+                        <li>
+                            <a href="using-edukidz.html">
+                    Using Edukidz
+                </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="accordian.html">
+                                    Accordian
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="slider.html">
+                                    Slider
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="tabs.html">
+                                    Tabs
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="icons.html">
+                                    Icons
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="misc-elements.html">
+                                    Misc Elements
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="contact-form.html">
+                                    Contact Form
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                           <a href="compile-scss.html">
+                    Compile SCSS
+                </a>
+                        </li>
+                       
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="bs-header" id="content">
+            <div class="container">
+                <h1>Compile SCSS</h1>
+                <p>An overview of how compile the SCSS files</p>
+            </div>
+        </div>
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#setting-up-your-system">Setting up your system</a>
+                                <ul class="nav">
+                                    <li><a href="#command-compile-scss">Command line usage to compile scss files</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#the-source-files">The SCSS files</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <h1 id="setting-up-your-system">Setting up your system</h1>
+                        <p>All project styles must be organised according to the folder structure that has been added. In the scss file, you can also put regular CSS code.</p>
+                        
+                        <h2>Main file</h2>
+                        <p>The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.</p>
+
+                        <h2>Sass Boilerplate</h2>
+                        <p>This is a sample project using the [7-1 architecture pattern] and sticking to [Sass Guidelines] writing conventions. Each folder of this project has its own `README.md` file to explain the purpose and add extra information. Be sure to browse the repository to see how it works.</p>
+
+                        <h2 id="command-compile-scss">Command line usage to compile scss files</h2>
+                        <p>To complile the scss files into final main css stylesheet we need to install below plugins:</p>
+<pre><code>npm install -g node-sass
+npm install -g postcss postcss-cli
+npm install -g postcss-cli autoprefixer</code>
+</pre>
+
+<p>If there's any error like below, run below commands, where 'sai' is the machine's username.<br>
+Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/node-sass/build'</p>
+<pre><code>sudo chown -R root:sai /usr/local/lib/node_modules/
+sudo chmod -R 775 /usr/local/lib/node_modules/</code></pre>
+
+<p>To run build, run below from command line:</p>
+
+<pre><code>node-sass assets/scss/main.scss dist/css/main.css --source-map dist/css/main.css.map</code></pre>
+
+<p>To watch live changes and build css, run below from command line:</p>
+
+<pre><code>node-sass assets/scss/main.scss dist/css/main.css --source-map dist/css/main.css.map --watch</code></pre>
+
+<p>To compress the main.css need, run below from command line:</p>
+
+<pre><code>node-sass assets/scss/main.scss dist/css/main.css --source-map dist/css/main.css.map --output-style compressed</code></pre>
+
+<p>To process main.css for cross-browesets, run below from command line:</p>
+
+<pre><code>node-sass assets/scss/main.scss dist/css/main.css --source-map dist/css/main.css.map && postcss -u autoprefixer -b 'latest 2 versions' -o dist/css/main.css < dist/css/main.css --no-map</code></pre>
+
+<p>To compress the main.css and process it for cross-browsers, run below from command line:</p>
+
+<pre><code>node-sass --output-style compressed assets/scss/main.scss dist/css/main.css --source-map dist/css/main.css.map && postcss -u autoprefixer -b 'latest 2 versions' -o dist/css/main.css < dist/css/main.css --no-map</code></pre>
+
+                        
+                        
+                        <h1 id="the-source-files">The SCSS files</h1>
+                        <p>The source files for the template can be found in the main download. Once you have unzipped the main download you will see a folder structure like this:</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Folder / File</th>
+                                    <th style="text-align:left">Contents</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>abstracts</td>
+                                    <td style="text-align:left">global variable, function, mixin and placeholder</td>
+                                </tr>
+                                <tr>
+                                    <td>base</td>
+                                    <td style="text-align:left">typographic rules</td>
+                                </tr>
+                                <tr>
+                                    <td>components</td>
+                                    <td style="text-align:left">It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines</td>
+                                </tr>
+                                <tr>
+                                    <td>layout</td>
+                                    <td style="text-align:left">stylesheets for the main parts of the site</td>
+                                </tr>
+                                <tr>
+                                    <td>pages</td>
+                                    <td style="text-align:left">page-specific styles</td>
+                                </tr>
+                                <tr>
+                                    <td>themes</td>
+                                    <td style="text-align:left">When having several themes, this file contains everything related to the default one</td>
+                                </tr>
+                                <tr>
+                                    <td>vendors</td>
+                                    <td style="text-align:left">This folder containing all the CSS files from external libraries and frameworks</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <footer class="docs-footer" role="contentinfo">
+            <div class="container">
+                <ul class="bs-masthead-links pull-left">
+                    <li class="current-version">
+                       Copyright © Webmavens
+                    </li>
+                </ul>
+        </footer>
+    </body>
+    <script src="assets/js/main.js"></script>
+</html>

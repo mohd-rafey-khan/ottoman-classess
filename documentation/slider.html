@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>Edukidz HTML5 | Slider</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="bs-docs-home ">
+        <header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Edukidz HTML</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="getting-started.html">
+                    Getting Started
+                </a>
+                        </li>
+                        <li>
+                            <a href="using-edukidz.html">
+                    Using Edukidz
+                </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="accordian.html">
+                                    Accordian
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="slider.html">
+                                    Slider
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="tabs.html">
+                                    Tabs
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="icons.html">
+                                    Icons
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="misc-elements.html">
+                                    Misc Elements
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="contact-form.html">
+                                    Contact Form
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="compile-scss.html">
+                    Compile SCSS
+                </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="bs-header" id="content">
+            <div class="container">
+                <h1>Slider</h1>
+                <p>How to create a Slider.</p>
+            </div>
+        </div>
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#slider">Slider</a>
+                            </li>
+                            <li><a href="#banner-slide-animation">Banner Slide Animation</a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <h1 id="slider">Slider</h1>
+                        <p>Edukidz uses owl-carousel to generate dynamic slideshows that adapt to touch events. The following is the standard markup for making a slideshow.</p>
+                        <pre><code>&lt;div class=&quot;owl-carousel owl-theme&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;
+        A slide (any content)
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+        Another  slide (any content)
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        <p>By passing the following settings to the slideshow, you can alter how it behaves:</p>
+                        <ul>
+                            <li><strong>autoplay</strong>: determines whether or not the slider will start automatically (true or false).</li>
+                            <li><strong>autoplayTimeout</strong>: The timeout for the autoplay interval (ex.7000).</li>
+                            <li><strong>loop</strong>: infinite loop. To create the illusion of a loop, duplicate the last and first objects (true or false).</li>
+                            <li><strong>nav</strong>: Display the next/previous buttons (true or false).
+</li>
+                            <li><strong>margin</strong>: margin-right(px) on item.</li>
+                            
+                            <li><strong>items</strong>: The number of items you want to see on the screen.</li>
+                            <li><strong>navText</strong>: HTML allowed.</li>
+                            <li><strong>dots</strong>: Show navigation with dots (true or false).</li>
+                            <li><strong>lazyLoad</strong>: Lazy load images. data-src and data-src-retina for highres. Also load images into background inline style if element is not <img></li>
+                            <li><strong>responsive</strong>: Object containing responsive options. Can be set to false to remove responsive capabilities.</li>
+                            
+
+                        </ul>
+                        <p>Example of hero-slider options:</p>
+                        <pre><code>$('.js-main-slider').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    autoplay: false,
+    autoplayTimeout: 10000,
+    items: 1,
+    navText: ['<svg version="1.1" width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve"><path d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788C492,219.198,479.172,207.418,464.344,207.418z"/></svg>', '<svg version="1.1" width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve"><path d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z"/></svg>'],
+    dots: false,
+    lazyLoad: true,
+    responsive: {
+        0: {
+            items: 1,
+            dots: true,
+            nav: false,
+        },
+        1200: {
+            items: 1,
+            dots: false,
+            nav: true,
+        }
+    }
+});</code></pre>
+                        <div class="alert alert-danger">
+                            <i class="fa fa-gittip"></i> Each slideshow should have an id or class.
+                        </div>
+                        <hr>
+                        <h1 id="banner-slide-animation">Banner Slide Animation</h1>
+                        <strong>Banner Slide Animation</strong> Animation of a Banner Slide This will be utilised to reveal the banner slide using animation. The following are the impacts and their corresponding classes:
+                                <ul>
+                                    <li><strong>Style 1</strong>: <em>animation__style01</em>
+                                    </li>
+                                    <li><strong>Style 2</strong>: <em>animation__style02</em>
+                                    </li>
+                                    <li><strong>Style 3</strong>: <em>animation__style03</em>
+                                    </li>
+                                    <li><strong>Style 4</strong>: <em>animation__style04</em>
+                                    </li>
+                                    <li><strong>Style 5</strong>: <em>animation__style05</em>
+                                    </li>
+                                    <li><strong>Style 6</strong>: <em>animation__style06</em>
+                                    </li>
+                                    <li><strong>Style 7</strong>: <em>animation__style07</em>
+                                    </li>
+                                    <li><strong>Style 8</strong>: <em>animation__style08</em>
+                                    </li>
+                                    <li><strong>Style 9</strong>: <em>animation__style09</em>
+                                    </li>
+                                    <li><strong>Style 10</strong>: <em>animation__style10</em>
+                                    </li>
+                                    
+                                </ul>
+                                <p>Example of hero-slider added animation__style10:</p>
+                                <pre><code>&lt;div class=&quot;js-main-slider owl-carousel owl-theme hero-owl&quot;&gt;
+    &lt;div class=&quot;hero-slide animation__style10&quot;&gt;
+        A slide (any content)
+    &lt;/div&gt;
+    &lt;div class=&quot;hero-slide animation__style10&quot;&gt;
+        A slide (any content)
+    &lt;/div&gt;
+&lt;/div&gt;
+
+                                </code></pre>
+                                <p><img src="assets/images/slider.png" alt=""></p>
+                                <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <footer class="docs-footer" role="contentinfo">
+            <div class="container">
+                <ul class="bs-masthead-links pull-left">
+                    <li class="current-version">
+                       Copyright © Webmavens
+                    </li>
+                </ul>
+        </footer>
+    </body>
+    <script src="assets/js/main.js"></script>
+</html>

@@ -1,0 +1,187 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.main-navbar {
+	padding-top: calc(15px + 1px);
+	padding-bottom: 15px;
+    transition: padding .4s ease-in-out;
+    // top: -1px;
+
+	&.is-fixed {
+		box-shadow: $box-shadow-sm;
+		padding-top: 5px;
+    	padding-bottom: 5px;
+    	position: fixed;
+	    top: 0;
+	    width: 100%;
+	    z-index: 1020;
+	}
+
+	&__wrapper {
+		min-height: 91px;
+
+		@include media-breakpoint-down(lg) {
+			min-height: 71px;
+		}
+	}
+
+	&__nav {
+
+		position: relative;
+
+		@include media-breakpoint-down(md) {
+			padding: 0;
+			margin-bottom: 20px;
+		}
+
+		&-link {
+			padding-right: 1rem !important;
+		    padding-left: 1rem !important;
+		    font-weight: 600 !important;
+		    color: $text-color !important;
+		    font-size: 0.9rem;
+		    position: relative;
+
+		    &:before {
+		    	content: '';
+			    position: absolute;
+		    	width: 25px;
+		    	height: 25px;
+		    	left: 7px;
+		    	top: 7px;
+			    z-index: -1;
+			    transform: rotate(7deg);
+			    border-radius: 10px 4px 10px 4px;
+			    opacity: 0;
+			    transition: all .3s ease-in-out;
+			    
+			    @include media-breakpoint-down(lg) {
+				    width: 22px;
+				    height: 22px;
+				    left: 0px;
+				    top: 6px;
+				}
+		    }
+
+		    &.active, 
+		    &:not(.dropdown-item):hover {	
+
+		    	&:before {
+		    		opacity: 1;
+			    	background: theme-color(pallet-color-1) !important;
+			    	transition: all .3s ease-in-out;
+			    }
+		    }
+
+		    &:not(.dropdown-item):hover {
+		    	&:before {
+		    		background: theme-color(pallet-color-5);
+		    	}
+		    }
+
+
+
+			@include media-breakpoint-down(lg) {
+				padding-right: 0.5rem !important;
+    			padding-left: 0.5rem !important;
+    			font-size: 0.75rem;
+			}
+
+			@include media-breakpoint-down(md) {
+				display: inline-block;
+			}
+
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		padding-top: calc(10px + 1px);
+		padding-bottom: 10px;
+	}
+
+	&__brand {
+	    width: 145px;
+	    margin: 0;
+
+	    img {
+	    	width: auto;
+	    	height: auto;
+	    }
+	}
+}
+
+.menu-overlay { 
+	display:none; 
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.offcanvas {
+	&__header {
+		display: none;
+	    padding-right: 2rem;
+	    padding-left: 2rem;
+	    text-align: center;
+
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
+
+	}
+
+	&__brand {
+		display: block;
+    	margin-bottom: 30px;
+	}
+
+	&__close {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		padding: 0;
+		width: 45px;
+		height: 45px;
+		font-size: 34px;
+		line-height: 1;
+	}
+}	
+
+@include media-breakpoint-down(md) {
+	.navbar-collapse {
+		position: fixed;
+	    top: 0;
+	    bottom: 0;
+	    left: 100%;
+	    width: 100%;
+	    // padding-right: 1rem;
+	    // padding-left: 1rem;
+	    overflow-y: auto;
+	    visibility: hidden;
+	    background-color: #fff;
+	    transition: visibility .2s ease-in-out;
+	    z-index: 1050;
+	    max-width: 300px;
+	    padding: 70px 0 0;
+    	text-align: center;
+
+	    &.show {
+			visibility: visible;
+			transform: translateX(-100%);
+	  	}
+  	}
+
+  	.offcanvas-active {
+  		overflow: hidden;
+
+  		.menu-overlay{
+			opacity: 0.5;
+			display: block;
+	  	}
+  	}
+}

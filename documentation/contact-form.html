@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>Edukidz HTML5 | Contact Form</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="bs-docs-home ">
+        <header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Edukidz HTML</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="getting-started.html">
+                    Getting Started
+                </a>
+                        </li>
+                        <li>
+                            <a href="using-edukidz.html">
+                    Using Edukidz
+                </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="accordian.html">
+                                    Accordian
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="slider.html">
+                                    Slider
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="tabs.html">
+                                    Tabs
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="icons.html">
+                                    Icons
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="misc-elements.html">
+                                    Misc Elements
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="contact-form.html">
+                                    Contact Form
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="compile-scss.html">
+                    Compile SCSS
+                </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="bs-header" id="content">
+            <div class="container">
+                <h1>Contact Form</h1>
+                <p>How to create a contact form with PHPMailer plugin.</p>
+            </div>
+        </div>
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#contact-form">Contact Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <h1 id="contact-form">Contact Form</h1>
+                        <p>The PHPMailer, a full-featured email production and transfer class for PHP, is now used in the contact form.</p>
+                            
+                        <h2>How to set up a working contact form</h2>
+                        <p>Do below changes in "formmailer/mailer.php" file to receive mail for the form filled in contact.html</p>
+<p><strong>Line 6: In place of "xxxxxxxxxxxx" add your AWS or email username.<br>
+Line 7: In place of "xxxxxxxxxxxx" add your AWS or email password.<br>
+Line 8: In place of "example@domain.com" add your from email id.<br>
+Line 9: In place of "Domain Person Name" add your from name via which name you want to send email.<br>
+Line 11: In place of "example@domain.com" add your to email id where you want to receive form lead details.<br>
+Line 12: In place of "example@domain.com" add your cc email id if in case you want one lead copy to be receive on another email ID too.<br>
+Line 13: In place of "example@domain.com" add your bcc email id if in case you want one lead copy to be receive on another email ID too.<br>
+Line 14: In place of "Contact form" add your subject line as per your requirement.<br>
+Line 16: In place of "email-smtp.us-east-1.amazonaws.com" you can add your own host.<br>
+Line 17: In place of "xxx" you can change it to your port setting.<br>
+Line 19: In place of "EduKids - Thank you for contacting us!" you can change it to your confirmation email subject line.<br>
+</strong> </p>
+
+</div>
+<img src="assets/images/mailer-setting.png" alt="contact-form">
+
+<div class="page-header"><h3>Create your own confirmation email message</h3><hr class="notop">
+<p>Do below changes in "mailer.php" file to customize confirmation email message.</p>
+<p><strong>
+Line 142: Add full logo URL.<br>
+Line 185, 189 and 193: Add your confirmation email message.<br>
+</strong> </p>
+
+</div>
+<img src="assets/images/logo-setting.png" alt="contact-form">
+<img src="assets/images/message-setting.png" alt="contact-form">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <footer class="docs-footer" role="contentinfo">
+            <div class="container">
+                <ul class="bs-masthead-links pull-left">
+                    <li class="current-version">
+                       Copyright © Webmavens
+                    </li>
+                </ul>
+        </footer>
+    </body>
+    <script src="assets/js/main.js"></script>
+</html>

@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+$title-font-stack: 'Bubblegum Sans', cursive !default;
+$text-font-stack: 'Montserrat', sans-serif !default;
+/// @type Color
+$primary-color: #0b6bd8 !default;
+$secondary-color: #333333 !default;
+$brand-color: #ff5a00 !default;
+$text-color: #333333;
+
+$grid-breakpoints: (
+	// Extra small screen / phone
+	xs: 0,
+	// Small screen / phone
+	sm: 576px,
+	// Medium screen / tablet
+	md: 768px,
+	// Large screen / desktop
+	lg: 992px,
+	// Extra large screen / wide desktop
+	xl: 1200px,
+	// Double Extra large screen / wide desktop
+	xxl: 1400px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1340px
+);
+
+// over-write bootstrap's default colors:
+$theme-colors: (
+	// "primary": $primary-color,
+	// "secondary": $secondary-color,
+	"pallet-color-1": #ffb164,
+	"pallet-color-2": #00c193,
+	"pallet-color-3": #229a00,
+	"pallet-color-4": #f31f00,
+	"pallet-color-5": #f9c000,
+	"pallet-color-6": #fa6e4f,
+);
+
+
+$enable-shadows: false !default;
+
+$input-border-color: #e4e4e4 !default;
+$input-box-shadow: unset !default;
+$font-family-base: $text-font-stack;
+$body-color: #666;
+$headings-font-family: $title-font-stack;
+$headings-color: $text-color;
+
+$input-btn-padding-y-lg: 1rem;
+$input-btn-padding-x-lg: 2.5rem;
+$input-btn-font-size-lg: 1.35rem;
+$input-btn-font-weight-lg: 700;
+$border-color: #e4e4e4;
+// $input-btn-line-height-lg: 2;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 4),
+    7: ($spacer * 5),
+    8: ($spacer * 6),
+    9: ($spacer * 7),
+    10: ($spacer * 8)
+  ),
+  $spacers
+);
+
+$enable-responsive-font-sizes: true;
+$dot-background-active: #00c193;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: 'assets/' !default;

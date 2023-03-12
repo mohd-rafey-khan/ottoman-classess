@@ -1,0 +1,129 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?9862e29d84dbb882fd2425c3838e6f50") format("truetype"),
+url("./flaticon.woff?9862e29d84dbb882fd2425c3838e6f50") format("woff"),
+url("./flaticon.woff2?9862e29d84dbb882fd2425c3838e6f50") format("woff2"),
+url("./flaticon.eot?9862e29d84dbb882fd2425c3838e6f50#iefix") format("embedded-opentype"),
+url("./flaticon.svg?9862e29d84dbb882fd2425c3838e6f50#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "seesaw-1": "\f101",
+    "pen": "\f102",
+    "stationery": "\f103",
+    "stationery-1": "\f104",
+    "checked": "\f105",
+    "tick": "\f106",
+    "abc-block": "\f107",
+    "book": "\f108",
+    "creativity": "\f109",
+    "cooking": "\f10a",
+    "email": "\f10b",
+    "phone-call": "\f10c",
+    "email-1": "\f10d",
+    "phone-call-1": "\f10e",
+    "pin": "\f10f",
+    "pin-1": "\f110",
+    "up-arrow": "\f111",
+    "up-arrow-1": "\f112",
+    "down-arrow": "\f113",
+    "down-arrow-1": "\f114",
+    "right-arrow": "\f115",
+    "left-arrow": "\f116",
+    "right-arrow-1": "\f117",
+    "left-arrow-1": "\f118",
+    "up-arrow-2": "\f119",
+    "up-arrow-3": "\f11a",
+);
+
+.flaticon-seesaw-1:before {
+    content: map-get($flaticon-map, "seesaw-1");
+}
+.flaticon-pen:before {
+    content: map-get($flaticon-map, "pen");
+}
+.flaticon-stationery:before {
+    content: map-get($flaticon-map, "stationery");
+}
+.flaticon-stationery-1:before {
+    content: map-get($flaticon-map, "stationery-1");
+}
+.flaticon-checked:before {
+    content: map-get($flaticon-map, "checked");
+}
+.flaticon-tick:before {
+    content: map-get($flaticon-map, "tick");
+}
+.flaticon-abc-block:before {
+    content: map-get($flaticon-map, "abc-block");
+}
+.flaticon-book:before {
+    content: map-get($flaticon-map, "book");
+}
+.flaticon-creativity:before {
+    content: map-get($flaticon-map, "creativity");
+}
+.flaticon-cooking:before {
+    content: map-get($flaticon-map, "cooking");
+}
+.flaticon-email:before {
+    content: map-get($flaticon-map, "email");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon-map, "phone-call");
+}
+.flaticon-email-1:before {
+    content: map-get($flaticon-map, "email-1");
+}
+.flaticon-phone-call-1:before {
+    content: map-get($flaticon-map, "phone-call-1");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon-map, "pin");
+}
+.flaticon-pin-1:before {
+    content: map-get($flaticon-map, "pin-1");
+}
+.flaticon-up-arrow:before {
+    content: map-get($flaticon-map, "up-arrow");
+}
+.flaticon-up-arrow-1:before {
+    content: map-get($flaticon-map, "up-arrow-1");
+}
+.flaticon-down-arrow:before {
+    content: map-get($flaticon-map, "down-arrow");
+}
+.flaticon-down-arrow-1:before {
+    content: map-get($flaticon-map, "down-arrow-1");
+}
+.flaticon-right-arrow:before {
+    content: map-get($flaticon-map, "right-arrow");
+}
+.flaticon-left-arrow:before {
+    content: map-get($flaticon-map, "left-arrow");
+}
+.flaticon-right-arrow-1:before {
+    content: map-get($flaticon-map, "right-arrow-1");
+}
+.flaticon-left-arrow-1:before {
+    content: map-get($flaticon-map, "left-arrow-1");
+}
+.flaticon-up-arrow-2:before {
+    content: map-get($flaticon-map, "up-arrow-2");
+}
+.flaticon-up-arrow-3:before {
+    content: map-get($flaticon-map, "up-arrow-3");
+}

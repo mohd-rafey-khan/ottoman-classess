@@ -1,0 +1,1 @@
+Favicons will be added here.

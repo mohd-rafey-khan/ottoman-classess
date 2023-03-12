@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>Edukidz HTML5 | Tabs</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="bs-docs-home ">
+        <header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Edukidz HTML</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="getting-started.html">
+                    Getting Started
+                </a>
+                        </li>
+                        <li>
+                            <a href="using-edukidz.html">
+                    Using Edukidz
+                </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="accordian.html">
+                                    Accordian
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="slider.html">
+                                    Slider
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="tabs.html">
+                                    Tabs
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="icons.html">
+                                    Icons
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="misc-elements.html">
+                                    Misc Elements
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="contact-form.html">
+                                    Contact Form
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="compile-scss.html">
+                    Compile SCSS
+                </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="bs-header" id="content">
+            <div class="container">
+                <h1>Tabs</h1>
+                <p>How to create a Tabs.</p>
+            </div>
+        </div>
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#tabs">Tabs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <h1 id="tabs">Tabs</h1>
+                        <p>Examples of how to use the Tabs feature in Bootstrap.</p>
+                        <pre><code>&lt;div class=&quot;nav nav-justified modern-tabs js-home-tabs home-about__tabs&quot; role=&quot;tablist&quot;&gt;
+                    &lt;a class=&quot;nav-link modern-tabs__link bg-pallet-color-1 active&quot; data-toggle=&quot;tab&quot; href=&quot;#Link_1&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;
+                        Link 1
+                    &lt;/a&gt;
+                    &lt;a class=&quot;nav-link modern-tabs__link bg-pallet-color-2&quot; data-toggle=&quot;tab&quot; href=&quot;#Link_2&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+                        Link 2
+                    &lt;/a&gt;
+                    &lt;a class=&quot;nav-link modern-tabs__link bg-pallet-color-3&quot; data-toggle=&quot;tab&quot; href=&quot;#Link_3&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+                        Link 3
+                    &lt;/a&gt;
+                    &lt;a class=&quot;nav-link modern-tabs__link bg-pallet-color-6&quot; data-toggle=&quot;tab&quot; href=&quot;#Link_4&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+                        Link 4
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Tab panes --&gt;
+                &lt;div class=&quot;tab-content bg-white modern-tabs__content&quot;&gt;
+                    &lt;div class=&quot;tab-pane p-lg-5 p-4 active&quot; id=&quot;Link_1&quot; role=&quot;tabpanel&quot;&gt;
+                        &lt;h3 class=&quot;title&quot;&gt;Heading for Tab 1&lt;/h3&gt;
+                        &lt;p&gt;Text content for Tab 1&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;tab-pane p-lg-5 p-4&quot; id=&quot;Link_2&quot; role=&quot;tabpanel&quot;&gt;
+                        &lt;h3 class=&quot;title&quot;&gt;Heading for Tab 2&lt;/h3&gt;
+                        &lt;p&gt;Text content for Tab 2&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;tab-pane p-lg-5 p-4&quot; id=&quot;Link_3&quot; role=&quot;tabpanel&quot;&gt;
+                        &lt;h3 class=&quot;title&quot;&gt;Heading for Tab 3&lt;/h3&gt;
+                        &lt;p&gt;Text content for Tab 3&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;tab-pane p-lg-5 p-4&quot; id=&quot;Link_4&quot; role=&quot;tabpanel&quot;&gt;
+                        &lt;h3 class=&quot;title&quot;&gt;Heading for Tab 4&lt;/h3&gt;
+                        &lt;p&gt;Text content for Tab 4&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;</code></pre>
+                        <p><img src="assets/images/tabs.png" alt=""></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <footer class="docs-footer" role="contentinfo">
+            <div class="container">
+                <ul class="bs-masthead-links pull-left">
+                    <li class="current-version">
+                       Copyright © Webmavens
+                    </li>
+                </ul>
+        </footer>
+    </body>
+    <script src="assets/js/main.js"></script>
+</html>

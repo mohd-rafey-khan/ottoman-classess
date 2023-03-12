@@ -1,0 +1,1 @@
+All variations of logoes will come here

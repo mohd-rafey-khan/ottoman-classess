@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>Edukidz HTML5 | Using Edukidz</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="bs-docs-home ">
+        <header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Edukidz HTML</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="getting-started.html">
+                    Getting Started
+                </a>
+                        </li>
+                        <li class="active">
+                            <a href="using-edukidz.html">
+                    Using Edukidz
+                </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="accordian.html">
+                                    Accordian
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="slider.html">
+                                    Slider
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="tabs.html">
+                                    Tabs
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="icons.html">
+                                    Icons
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="misc-elements.html">
+                                    Misc Elements
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="contact-form.html">
+                                    Contact Form
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                           <a href="compile-scss.html">
+                    Compile SCSS
+                </a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="bs-header" id="content">
+            <div class="container">
+                <h1>Using Edukidz</h1>
+                <p>How to create and modify the theme&#x27;s content.</p>
+            </div>
+        </div>
+        
+        <div class="container bs-docs-container">
+            <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#page-layout">Page Layout</a>
+                                <ul class="nav">
+                                    <li><a href="#menu-header">Menu Header</a>
+                                    </li>
+                                    <li><a href="#page-content">Page Content</a>
+                                    </li>
+                                    <li><a href="#footer">Footer</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#one-page-website">One Page website</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <h1 id="page-layout">Page Layout</h1>
+                        <h2 id="menu-header">Menu Header</h2>
+                        <p>The page Logo and navigation list are located in the header region <code>&lt;header class=&quot;main-navbar__wrapper&quot;&gt;...&lt;/header&gt;</code> of the page. The navigation follows the responsive guidelines of Bootstrap, so it will collapse to a dropdown menu on smaller displays. On the bootstrap website, you may find out more about navigation markup.</p>
+        <pre><code>  &lt;header class=&quot;main-navbar__wrapper&quot;&gt;
+    &lt;!-- Main Navigation --&gt;
+    &lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-white main-navbar sticky-top&quot;  id=&quot;mainNavbar&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;!-- Brand or Logo Starts --&gt;
+            &lt;a class=&quot;navbar-brand main-navbar__brand&quot; href=&quot;/&quot;&gt;&lt;img src=&quot;assets/img/logo/logo.png&quot; width=&quot;50&quot; height=&quot;50&quot; class=&quot;img-fluid&quot; alt=&quot;Logo&quot;&gt; &lt;/a&gt;
+            &lt;!-- Brand or Logo Ends --&gt;
+
+            &lt;!-- Navigation Toggle Button Starts --&gt;
+            &lt;button class=&quot;navbar-toggler border-0&quot; type=&quot;button&quot; data-trigger=&quot;#main_nav&quot; &gt;
+                &lt;svg class=&quot;svg-icon&quot; width=&quot;25&quot; height=&quot;20&quot; viewBox=&quot;0 0 41 33&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path class=&quot;svg-icon__path&quot; d=&quot;M0 3.3C0 5.12254 1.47746 6.6 3.3 6.6H37.7C39.5225 6.6 41 5.12254 41 3.3C41 1.47746 39.5225 0 37.7 0H3.3C1.47746 0 0 1.47746 0 3.3Z&quot; fill=&quot;#252C53&quot;&gt;&lt;/path&gt;
+                    &lt;path class=&quot;svg-icon__path&quot; d=&quot;M0 16.5002C0 18.3227 1.47746 19.8002 3.3 19.8002H37.7C39.5225 19.8002 41 18.3227 41 16.5002C41 14.6777 39.5225 13.2002 37.7 13.2002H3.3C1.47746 13.2002 0 14.6777 0 16.5002Z&quot; fill=&quot;#252C53&quot;&gt;&lt;/path&gt;
+                    &lt;path class=&quot;svg-icon__path&quot; d=&quot;M0 29.6999C0 31.5224 1.47746 32.9999 3.3 32.9999H37.7C39.5225 32.9999 41 31.5224 41 29.6999C41 27.8774 39.5225 26.3999 37.7 26.3999H3.3C1.47746 26.3999 0 27.8774 0 29.6999Z&quot; fill=&quot;#252C53&quot;&gt;&lt;/path&gt;
+                &lt;/svg&gt;
+            &lt;/button&gt;
+            &lt;!-- Navigation Toggle Button Ends --&gt;
+
+            &lt;div class=&quot;collapse navbar-collapse main-navbar__collapse&quot; id=&quot;main_nav&quot;&gt;
+                &lt;div class=&quot;offcanvas__header&quot;&gt;
+                    &lt;a class=&quot;offcanvas__brand&quot; href=&quot;/&quot;&gt;&lt;svg id=&quot;Capa_1&quot; enable-background=&quot;new 0 0 512 512&quot; height=&quot;50&quot; viewBox=&quot;0 0 512 512&quot; width=&quot;50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;g&gt;&lt;g&gt;&lt;path d=&quot;m376 271h-240c-8.291 0-15-6.709-15-15v-241c0-8.291 6.709-15 15-15h240c8.291 0 15 6.709 15 15v241c0 8.291-6.709 15-15 15z&quot; fill=&quot;#ff9580&quot;/&gt;&lt;/g&gt;&lt;path d=&quot;m256 271h120c8.291 0 15-6.709 15-15v-241c0-8.291-6.709-15-15-15h-120z&quot; fill=&quot;#f66&quot;/&gt;&lt;g id=&quot;Alphabet_Blocks_1_&quot;&gt;&lt;g&gt;&lt;path d=&quot;m256 256 30 120-30 136h-241c-8.401 0-15-6.601-15-15v-226c0-8.401 6.599-15 15-15z&quot; fill=&quot;#9df&quot;/&gt;&lt;/g&gt;&lt;path d=&quot;m121 256h120 15v15 226 15c-7.5 0-15 0-15 0h-120s0-1.122 0-3.217c0-29.555 0-252.783 0-252.783z&quot; fill=&quot;#66b3ff&quot;/&gt;&lt;g&gt;&lt;path d=&quot;m329.418 174.291-60-120c-5.389-10.742-21.488-10.66-26.836 0l-60 120c-3.691 7.412-.703 16.421 6.709 20.127 7.58 3.739 16.469.586 20.127-6.709l10.854-21.709h71.455l10.854 21.709c3.654 7.288 12.542 10.45 20.127 6.709 7.413-3.706 10.401-12.715 6.71-20.127zm-94.146-38.291 20.728-41.455 20.728 41.455z&quot; fill=&quot;#f0f7ff&quot;/&gt;&lt;path d=&quot;m136 316h-60c-8.291 0-15 6.709-15 15 0 3.256 0 124.455 0 120 0 8.291 6.709 15 15 15h60c24.814 0 45-20.186 45-45 0-11.567-4.508-22.02-11.704-30 7.196-7.98 11.704-18.433 11.704-30 0-24.814-20.186-45-45-45zm-45 30h45c8.262 0 15 6.724 15 15s-6.738 15-15 15h-45zm45 90h-45v-30h45c8.262 0 15 6.724 15 15s-6.738 15-15 15z&quot; fill=&quot;#f0f7ff&quot;/&gt;&lt;path d=&quot;m136 316h-15v30h15c8.262 0 15 6.724 15 15s-6.738 15-15 15h-15v30h15c8.262 0 15 6.724 15 15s-6.738 15-15 15h-15v30h15c24.814 0 45-20.186 45-45 0-11.567-4.508-22.02-11.704-30 7.196-7.98 11.704-18.433 11.704-30 0-24.814-20.186-45-45-45z&quot; fill=&quot;#dfe7f4&quot;/&gt;&lt;/g&gt;&lt;/g&gt;&lt;path d=&quot;m497 256h-241v256h241c8.401 0 15-6.601 15-15v-226c0-8.401-6.599-15-15-15z&quot; fill=&quot;#ffe14d&quot;/&gt;&lt;path d=&quot;m377 512h120c8.291 0 15-6.709 15-15v-226c0-8.291-6.709-15-15-15h-120z&quot; fill=&quot;#fb3&quot;/&gt;&lt;g&gt;&lt;path d=&quot;m391 466c-41.367 0-75-33.647-75-75s33.633-75 75-75c20.068 0 38.906 7.808 53.057 21.987 5.83 5.859 5.83 15.366-.029 21.211-5.859 5.83-15.381 5.859-21.24-.029-8.468-8.496-19.747-13.169-31.788-13.169-24.814 0-45 20.186-45 45s20.186 45 45 45c12.041 0 23.32-4.673 31.787-13.169 5.859-5.889 15.381-5.859 21.24-.029 5.859 5.845 5.859 15.352.029 21.211-14.15 14.179-32.988 21.987-53.056 21.987z&quot; fill=&quot;#f0f7ff&quot;/&gt;&lt;/g&gt;&lt;g&gt;&lt;g&gt;&lt;g&gt;&lt;path d=&quot;m444.057 444.013c5.83-5.859 5.83-15.366-.029-21.211-5.859-5.83-15.381-5.859-21.24.029-8.468 8.496-19.747 13.169-31.788 13.169-4.887 0-9.591-.794-14-2.241v30.911c4.539.86 9.214 1.33 14 1.33 20.068 0 38.906-7.808 53.057-21.987z&quot; fill=&quot;#dfe7f4&quot;/&gt;&lt;/g&gt;&lt;g&gt;&lt;path d=&quot;m391 316c-4.786 0-9.461.469-14 1.33v30.911c4.409-1.447 9.113-2.241 14-2.241 12.041 0 23.32 4.673 31.787 13.169 5.859 5.889 15.381 5.859 21.24.029 5.859-5.845 5.859-15.352.029-21.211-14.15-14.179-32.988-21.987-53.056-21.987z&quot; fill=&quot;#dfe7f4&quot;/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;path d=&quot;m302.582 187.709c3.654 7.288 12.542 10.45 20.127 6.709 7.412-3.706 10.4-12.715 6.709-20.127l-60-120c-2.692-5.367-8.057-8.027-13.418-8.022v48.276l20.728 41.455h-20.728v30h35.728z&quot; fill=&quot;#dfe7f4&quot;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;
+                    &lt;button class=&quot;btn offcanvas__close js-btn-close float-right&quot;&gt;&times;&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;!-- Nav Links Starts --&gt;
+                &lt;ul class=&quot;navbar-nav mr-lg-auto ml-lg-5 main-navbar__nav&quot;&gt;
+                    &lt;li class=&quot;nav-item main-navbar__nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link main-navbar__nav-link active js-scroll&quot; href=&quot;#home&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item main-navbar__nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link main-navbar__nav-link js-scroll&quot; href=&quot;#aboutus&quot;&gt;About&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item main-navbar__nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link main-navbar__nav-link js-scroll&quot; href=&quot;#services&quot;&gt;Services&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item main-navbar__nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link main-navbar__nav-link js-scroll&quot; href=&quot;#courses&quot;&gt;Courses&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item main-navbar__nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link main-navbar__nav-link js-scroll&quot; href=&quot;#gallery&quot;&gt;Gallery&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item main-navbar__nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link main-navbar__nav-link js-scroll&quot; href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;a href=&quot;#contact&quot; class=&quot;btn btn-pallet-color-4 slide__action px-4 py-2 shadow-sm font-weight-bold js-scroll&quot;&gt;Admission Now&lt;/a&gt;
+                &lt;!-- Nav Links Ends --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;menu-overlay&quot;&gt;&lt;/div&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+
+                    <h2 id="page-content">Page Content</h2>
+                        <p>The content <code>&lt;div id=&quot;content&quot; role=&quot;main&quot;&gt; ...&lt;/div&gt;</code> section contains the theme's major content. To visually and conceptually separate the content, it is divided into sections.</p>
+
+                        <hr>
+                        <h2 id="footer">Footer</h2>
+                        <p>The footer area <code>&lt;footer id=&quot;footer&quot;&gt; ...&lt;footer&gt;</code> contains the page's footer which  is located at the bottom of the page and requires the markup below.</p>
+                        <pre><code>&lt;footer class=&quot;site-footer home-page&quot; id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;p class=&quot;site-footer__copyright&quot;&gt;&copy; Copyright, 2021. All Rights Reserved.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;footer&gt;</code></pre>
+                <h1 id="one-page-website">One Page website</h1>
+                        <p>EduKidz is a <strong>single-page</strong> website for children. Two things must be ensured in order to do this. To begin, you must set a unique <strong>id</strong> to each of the sections that you want to scroll over, as seen in</p>
+                        <pre><code>&lt;div id=&quot;home&quot;&gt;
+...
+&lt;/div&gt;</code></pre>
+                        <p>Second, you must ensure that each menu item connects to the appropriate part by using the <em>#</em> symbol followed by the section's <strong>id</strong> in the href attribute, as seen below.</p>
+
+                        
+                        <pre><code>&lt;a class=&quot;nav-link main-navbar__nav-link js-scroll&quot; href=&quot;#home&quot;&gt;home&lt;/a&gt;</code></pre>
+
+                        <p>As a result, clicking the <strong>Home</strong> menu option will scroll you to the top of the page to the home area. If we had a page with three sections, for example, it would look like this.</p>
+
+                        <pre><code>&lt;body&gt;
+                            Add your menu here
+                            &lt;div id=&quot;home&quot;&gt;
+                                ...
+                            &lt;/div&gt;
+                            &lt;div id=&quot;aboutus&quot;&gt;
+                                ...
+                            &lt;/div&gt;
+                            &lt;div id=&quot;services&quot;&gt;
+                                ...
+                            &lt;/div&gt;
+                        &lt;/body&gt;
+                        </code></pre>
+                        
+                        <p>Now you have menu items that link to your sections, and when the user clicks on the appropriate link, the user will be taken to that area.</p>
+                        <hr>
+                        
+
+                    </div>
+                </div>
+        </div>
+         <footer class="docs-footer" role="contentinfo">
+            <div class="container">
+                <ul class="bs-masthead-links pull-left">
+                    <li class="current-version">
+                       Copyright © Webmavens
+                    </li>
+                </ul>
+        </footer>
+    </body>
+    <script src="assets/js/main.js"></script>
+</html>

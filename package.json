@@ -1,0 +1,17 @@
+{
+  "name": "uiux_boilerplate",
+  "version": "1.0.0",
+  "description": "uiux_boilerplate scss",
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Webmavens",
+  "license": "ISC"
+}

@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Basic styles for links
+ */
+a {
+  	color: $primary-color;
+  	text-decoration: none;
+  	outline: 0 !important;
+
+  	@include on-event {
+    	color: theme-color(pallet-color-6);
+    	text-decoration: underline;
+    	transition: all 0.3s ease;
+  	}
+}
+
+.img-wrapper {
+	position: relative;
+	height: 0;
+	padding-bottom: 100%;
+	overflow: hidden;
+
+	img,
+	video {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		object-fit: cover;
+		height: 100%;
+		width: 100%
+	}
+}
+
+.inner-padding {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&--lg {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}
