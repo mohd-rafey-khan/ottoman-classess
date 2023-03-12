@@ -12330,7 +12330,7 @@ body {
       padding-top: calc(10px + 1px);
       padding-bottom: 10px; } }
   .main-navbar__brand {
-    width: 145px;
+    /* width: 145px; */
     margin: 0; }
     .main-navbar__brand img {
       width: auto;

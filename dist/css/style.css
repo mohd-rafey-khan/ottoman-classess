@@ -1,0 +1,8 @@
+.navbar-brand .logo{
+    /* letter-spacing: 5px; */
+    font-size: 30px;
+    font-family: 'Black And White Picture', sans-serif;
+    background: -webkit-linear-gradient(left,red,green,red, #f9c12f,#f9c12f, #f9c12f,green,green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
